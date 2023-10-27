@@ -1,0 +1,128 @@
+.titulo_carrossel {
+  color: var(--laranja);
+  background-color: var(--branco);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 1em 0 0.5em 0;
+}
+
+.swiper-slide img {
+  width: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
+}
+
+.swiper-pagination {
+  position: initial;
+  margin: 0.5em 0;
+}
+
+.card {
+  border-radius: 10px;
+  background: var(--branco);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin: 1em;
+  padding: 1em;
+}
+
+.descricao_card {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5em;
+}
+
+.titulo_descricao {
+  color: var(--laranja);
+  font-weight: 700;
+}
+
+.livro_descricao {
+  color: var(--azul);
+  font-weight: 700;
+  font-size: 18px;
+  margin: 1em 0;
+}
+
+.texto_descricao {
+  font-size: 14px;
+}
+
+.botoes_descricao {
+  display: flex;
+  justify-content: space-between;
+}
+
+.botoes {
+  display: flex;
+}
+
+.botao_saiba {
+  padding: 1em 2.2em;
+  background-color: var(--laranja);
+  color: var(--branco);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .titulo_carrossel {
+    font-size: 26px;
+  }
+
+  .swiper-pagination {
+    margin: 2em 0 4em 0;
+  }
+
+  .swiper {
+    width: 65%;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: block;
+    top: 60%;
+  }
+
+  .card {
+    width: 40%;
+    margin: 2.5em auto;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .conjunto_carrosselbanner{
+    display: flex;
+    padding: 3em 10em;
+    gap: 3em;
+    align-items: center;
+  }
+
+  .swiper{
+    width: 35%;
+  }
+
+  .swiper-pagination {
+    margin: 2em 0 2em 0;
+  }
+
+  .card {
+    margin-top: 7em;
+  }
+
+  .descricao{
+    padding-right: 7em;
+  }
+
+  .titulo_descricao{
+    font-size: 32px;
+  }
+
+  .texto_descricao{
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,157 @@
+.cabecalho {
+  background-color: var(--branco);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.container_menu {
+  width: 48px;
+  height: 50px;
+  background-image: url(../img/icons/Menu.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+}
+
+.container_imagem {
+  padding: 0.5em;
+}
+
+.menu_lista {
+  background-color: var(--branco);
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: 65vw;
+}
+
+.container_checkbox {
+  display: none;
+}
+
+.container_checkbox:checked ~ .menu_lista {
+  display: block;
+}
+
+.container_checkbox:checked ~ .menu_hamburguer {
+  background: var(--azul-degrade);
+}
+
+.container_checkbox:checked ~ .menu_hamburguer > .container_menu {
+  background-image: url(../img/icons/MenuAberto.svg);
+}
+
+.lista_titulo,
+.lista_item {
+  padding: 1em;
+}
+
+.lista_titulo {
+  color: var(--laranja);
+  font-weight: 700;
+}
+
+.lista_link {
+  background: var(--azul-degrade);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.titulo_header {
+  display: none;
+}
+
+.opcoes_header {
+  display: none;
+}
+
+.icone_descricao {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .titulo_header {
+    font-family: var(--fonte-titulo);
+    font-size: 30px;
+    font-weight: 400;
+    display: block;
+  }
+
+  .negrito {
+    font-weight: 700;
+  }
+
+  .opcoes_header {
+    display: flex;
+  }
+
+  .opcao {
+    padding: 1em 2em;
+  }
+
+  .opcao_link {
+    text-decoration: none;
+    color: var(--preto);
+  }
+
+  .fav {
+    display: none;
+  }
+
+  .container_menu {
+    display: none;
+  }
+
+  .botao_opcao:checked ~ .menu_opcao {
+    background: var(--azul-degrade);
+  }
+
+  .botao_opcao:checked ~ .menu_opcao > .opcao {
+    color: var(--branco);
+  }
+
+  .botao_opcao:checked ~ .menu_lista {
+    display: block;
+    width: auto;
+  }
+
+  .lista_item:hover {
+    background: var(--azul-degrade);
+  }
+
+  .lista_item:hover > .lista_link {
+    -webkit-text-fill-color: var(--branco);
+    text-decoration: none;
+  }
+
+  .botao_opcao {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .icone_descricao {
+    display: block;
+  }
+
+  .opcoes_header {
+    margin-right: auto;
+    margin-left: 3em;
+  }
+
+  .conjunto_icone {
+    display: flex;
+    align-items: center;
+    padding-right: 3em;
+    text-decoration: none;
+    color: var(--preto);
+  }
+}

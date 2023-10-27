@@ -1,0 +1,75 @@
+.contato {
+  padding: 2em 1em;
+  background-color: var(--branco);
+  color: var(--azul);
+}
+
+.contato_titulo {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.contato_texto {
+  font-weight: 300;
+  margin: 1em 0;
+}
+
+.contato_input {
+  border-radius: 24px;
+  border: 2px solid var(--azul);
+  padding: 1em;
+  width: 90%;
+  color: var(--azul);
+}
+
+.contato_input::placeholder {
+  font-family: var(--fonte-principal);
+  color: var(--azul);
+  background: url(../img/icons/Mail.svg);
+  background-repeat: no-repeat;
+  padding-left: 2em;
+}
+
+@media screen and (min-width: 1024px) {
+  .contato {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 2em 7em;
+    align-items: center;
+  }
+
+  .contato_descricao {
+    width: 80%;
+  }
+
+  .contato_titulo {
+    font-size: 24px;
+  }
+
+  .contato_texto {
+    font-weight: 300;
+  }
+
+  .contato_input {
+    width: 80%;
+    height: min-content;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+
+  .contato{
+    display: flex;
+    justify-content: center;
+    padding: 3em 0;
+  }
+
+  .contato_descricao {
+    width: 20%;
+  }
+
+  .contato_input {
+    width: 20%;
+  }
+
+}
